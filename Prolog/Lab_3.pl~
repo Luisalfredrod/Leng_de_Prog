@@ -1,0 +1,17 @@
+partir(H,[],[],[]).
+partir(H,[X|T],[X|L],G):-
+    X>=H,
+    partir(H,T,L,G).
+
+partir(H,[X|T],L,[X|G]):-
+    X<H,
+    partir(H,T,L,G).
+
+q_sort([],A,A).
+q_sort([H|T],A,Sorted):-
+	partir(H,T,L1,L2),
+	q_sort(L1,A,S),
+        q_sort(L2,[H|S],Sorted).
+
+quick_sort(List,Sorted):-
+    q_sort(List,[],Sorted).
