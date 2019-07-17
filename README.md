@@ -1,2 +1,2 @@
-# Leng_de-_Prog
+# Lenguajes_de_Programacion
 Documentos de clase de lenguajes de programación
